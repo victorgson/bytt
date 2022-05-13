@@ -25,7 +25,5 @@
   "editor.rulers": [80],
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true,
-  "typescript.validate.enable": false,
-  "javascript.validate.enable": false
+  "files.trimTrailingWhitespace": true
 }
