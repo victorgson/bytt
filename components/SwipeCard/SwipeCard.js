@@ -1,9 +1,12 @@
+/*eslint no-undef: "error"*/
+/*eslint-env node*/
+
 import React from 'react';
 import { StyleSheet, Text, View, Dimensions, Image, Animated, PanResponder } from 'react-native';
 
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 const SCREEN_WIDTH = Dimensions.get('window').width;
-import Icon from 'react-native-vector-icons/Ionicons';
+
 const Users = [
   { id: '1', uri: require('../../assets/img/stol.png') },
   { id: '2', uri: require('../../assets/img/download.png') },
@@ -11,6 +14,8 @@ const Users = [
   { id: '4', uri: require('../../assets/img/stol.png') },
   { id: '5', uri: require('../../assets/img/stol.png') },
 ];
+
+
 
 export default class App extends React.Component {
   constructor() {

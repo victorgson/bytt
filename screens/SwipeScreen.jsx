@@ -1,21 +1,27 @@
 import React from 'react';
-import { Text, View } from 'react-native';
 import styled from 'styled-components/native';
+import SwipeCard from '../components/SwipeCard/SwipeCard';
 
-const HomeScreen = () => {
+const SwipeScreen = () => {
   return (
     <Container>
-      <Text> HomeScreen </Text>
+      <SwipeCard />
     </Container>
   );
 };
 
-export default HomeScreen;
+export default SwipeScreen;
 
 const Container = styled.View`
   height: 100%;
   width: 100%;
+  margin-bottom: 100px;
   display: flex;
-  justify-content: center;
-  align-items: center;
 `;
+
+const Test = styled.View`
+hei
+`;
+
+
+const style 

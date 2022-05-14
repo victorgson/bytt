@@ -1,3 +1,6 @@
+/*eslint no-undef: "error"*/
+/*eslint-env node*/
+
 import React, { useEffect, useRef, useState } from 'react';
 import { StyleSheet, Text, View, Dimensions, Image, Animated, PanResponder } from 'react-native';
 const SCREEN_HEIGHT = Dimensions.get('window').height;
