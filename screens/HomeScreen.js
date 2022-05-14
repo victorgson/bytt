@@ -1,11 +1,12 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Button, Text } from 'react-native';
 import styled from 'styled-components/native';
+import * as Linking from 'expo-linking';
 
 const HomeScreen = () => {
   return (
     <Container>
-      <Text> HomeScreen </Text>
+      <Button title="HEJ" onPress={() => console.log('asd')}></Button>
     </Container>
   );
 };
