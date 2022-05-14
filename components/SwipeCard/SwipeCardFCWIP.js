@@ -1,8 +1,8 @@
 /*eslint no-undef: "error"*/
 /*eslint-env node*/
 
-import React, { useEffect, useRef, useState } from 'react';
-import { StyleSheet, Text, View, Dimensions, Image, Animated, PanResponder } from 'react-native';
+import React, { useRef, useState } from 'react';
+import { Text, View, Dimensions, Image, Animated, PanResponder } from 'react-native';
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
@@ -16,7 +16,6 @@ const Foods = [
 
 const SwipeCard = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const countRef = useRef(0);
 
   const position = useRef(new Animated.ValueXY()).current;
 
@@ -61,7 +60,7 @@ const SwipeCard = () => {
 
   const panResponder = useRef(
     PanResponder.create({
-      onStartShouldSetPanResponder: (evt, gestureState) => true,
+      onStartShouldSetPanResponder: () => true,
       onPanResponderMove: (evt, gestureState) => {
         position.setValue({ x: gestureState.dx, y: gestureState.dy });
       },
@@ -91,7 +90,7 @@ const SwipeCard = () => {
     })
   ).current;
 
-  renderUsers = () => {
+  const renderUsers = () => {
     return Foods.map((item, i) => {
       if (i < currentIndex) {
         return null;

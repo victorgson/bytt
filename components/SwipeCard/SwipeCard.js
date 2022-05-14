@@ -2,7 +2,7 @@
 /*eslint-env node*/
 
 import React from 'react';
-import { StyleSheet, Text, View, Dimensions, Image, Animated, PanResponder } from 'react-native';
+import { Text, View, Dimensions, Image, Animated, PanResponder } from 'react-native';
 
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 const SCREEN_WIDTH = Dimensions.get('window').width;
@@ -14,8 +14,6 @@ const Users = [
   { id: '4', uri: require('../../assets/img/stol.png') },
   { id: '5', uri: require('../../assets/img/stol.png') },
 ];
-
-
 
 export default class App extends React.Component {
   constructor() {
@@ -65,7 +63,8 @@ export default class App extends React.Component {
   }
   UNSAFE_componentWillMount() {
     this.PanResponder = PanResponder.create({
-      onStartShouldSetPanResponder: (evt, gestureState) => true,
+      // onStartShouldSetPanResponder: (evt, gestureState) => true,
+      onStartShouldSetPanResponder: () => true,
       onPanResponderMove: (evt, gestureState) => {
         this.position.setValue({ x: gestureState.dx, y: gestureState.dy });
       },

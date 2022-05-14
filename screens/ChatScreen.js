@@ -6,9 +6,7 @@ const ChatScreen = () => {
   return (
     <Container>
       <Text> ChatScreen</Text>
-    
     </Container>
-    
   );
 };
 
