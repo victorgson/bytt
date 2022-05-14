@@ -12,4 +12,4 @@ jobs:
         uses: actions/setup-node@v2
       - run: npm ci
       - run: npx eslint --ext .js --max-warnings 0 .
-      - run: npx prettier --config .prettierrc.json -l "**/*.{js}"
+      - run: npx prettier --config .prettierrc.json -l '**/*.{js,jsx,tsx,ts}'
